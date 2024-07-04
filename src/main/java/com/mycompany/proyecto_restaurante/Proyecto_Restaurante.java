@@ -11,6 +11,6 @@ package com.mycompany.proyecto_restaurante;
 public class Proyecto_Restaurante {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
 }
