@@ -13,6 +13,12 @@ public class Proyecto_Restaurante {
         int verificarContra;
         int intentos = 0;
         String verificarUsuario = "";
+        
+        //Descripción del Negocio
+        String descripcionNegocio = "Delicias Gourmet \n**Con buena expriencia en lo Gourmet**"
+                                    + "\n**Nos adaptamos a las nuevas demandas**"
+                                    + "\n**Y contamos con un excelente servicio al cliente**";
+        JOptionPane.showMessageDialog(null,descripcionNegocio);
 
         //Login
         while (intentos < 3){
