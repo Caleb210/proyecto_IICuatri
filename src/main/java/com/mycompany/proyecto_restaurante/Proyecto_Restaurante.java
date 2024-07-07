@@ -1,10 +1,21 @@
 
 package com.mycompany.proyecto_restaurante;
-
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane; //importacion
 public class Proyecto_Restaurante {
 
     public static void main(String[] args) {
+        // Definir la ruta de la imagen
+        String rutaImagen = "src\\main\\java\\com\\mycompany\\logo.jpg";
+        ImageIcon icono = new ImageIcon(rutaImagen);
+
+        // Verificar si la imagen se ha cargado correctamente
+        if (icono.getIconWidth() == -1) {
+            JOptionPane.showMessageDialog(null, "La imagen no se pudo cargar. Verifique la ruta: " + rutaImagen);
+        } else {
+            JOptionPane.showMessageDialog(null, "Bienvenido al restaurante Delicias Gourmet", "Logo", JOptionPane.INFORMATION_MESSAGE, icono);
+        }
+        
         //Declaración de constantes
         String cliente = "root";
         int password =  1234;
