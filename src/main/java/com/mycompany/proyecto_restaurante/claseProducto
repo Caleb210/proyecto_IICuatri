@@ -1,5 +1,11 @@
 package com.mycompany.proyecto_restaurante;
 
 public class claseProducto {
+    public void registraVentas(){
+
+    }
+    public void gestionarVentas(){
+
+    }
     
 }
