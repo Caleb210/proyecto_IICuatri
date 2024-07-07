@@ -10,8 +10,7 @@ public class Proyecto_Restaurante {
         int password =  1234;
 
         //Declaración de variables
-        int verificarContra;
-        int intentos = 0;
+        int verificarContra = 0, intentos = 0, opcion = 0;
         String verificarUsuario = "";
         
         //Descripción del Negocio
@@ -26,45 +25,44 @@ public class Proyecto_Restaurante {
             verificarContra = Integer.parseInt(JOptionPane.showInputDialog("ingrese su contraseña"));
 
             if (verificarUsuario.equals(cliente) && verificarContra == password){  //se usa .equals para comparar ya que el == no sirve en el string
-            JOptionPane.showMessageDialog(null, "Bienvenido al restaurante Delicias Gourmet");
-            while(opcion == 5){
-            opcion = Integer.parseInt(JOptionPane.showInputDialog(": : : HELADOS POPS : : :" + 
-                                                            "\n Bienvenido " + cliente + 
-                                                            "\n Seleccione un sabor " + 
-                                                            "\n 1- Módulo de registro de clientes" + 
-                                                            "\n 2- Agenda de reservas" + 
-                                                            "\n 3- Módulo de ventas de productos" + 
-                                                            "\n 4- Reportes de atención" + 
-                                                            "\n 5- Salir"));
-            switch(opcion){
-                case 1:
-                    //Módulo de registro de clientes
-                    JOptionPane.showMessageDialog(null,"Bienvenido al Modulo de registro de clientes");
-                    break;
-                case 2:
-                    //Agenda de reservas
-                    JOptionPane.showMessageDialog(null,"Bienvenido al Modulo de registro de clientes");
-                    break;
-                case 3:
-                    //Módulo de ventas de productos
-                    JOptionPane.showMessageDialog(null,"Bienvenido al Modulo de registro de clientes");
-                    break;
-                case 4:
-                    //Reportes de atención
-                    JOptionPane.showMessageDialog(null,"Bienvenido al Modulo de registro de clientes");
-                    break;
-                case 5:
-                    //Salir
-                    JOptionPane.showMessageDialog(null,"Fin");
-                    break;
+                //Creacion del bucle en donde se estara implimiendo el menu
+                while(opcion != 5){
+                    //Impresion del menu con opciones
+                    opcion = Integer.parseInt(JOptionPane.showInputDialog("***** MENU DELICIAS GOURMET *****" + 
+                                                                            "\n Bienvenido al menu DELICIAS GOURMET" + cliente + 
+                                                                            "\n Seleccione un opcion: " + 
+                                                                            "\n 1- Módulo de registro de clientes." + 
+                                                                            "\n 2- Agenda de reservas." + 
+                                                                            "\n 3- Módulo de ventas de productos." + 
+                                                                            "\n 4- Reportes de atención." + 
+                                                                            "\n 5- Salir."));
+                    //Apertura de un switch donde se manejaran los modulos escogidos por el usuario
+                    switch(opcion){
+                    case 1:
+                        //Módulo de registro de clientes
+                        JOptionPane.showMessageDialog(null, "Modulo en ");
+                        break;
+                    case 2:
+                        //Agenda de reservas
+                        break;
+                    case 3:
+                        //Módulo de ventas de productos
+                        break;
+                    case 4:
+                        //Reportes de atención
+                        break;
+                    case 5:
+                        //Salir
+                        JOptionPane.showMessageDialog(null,"Fin del Sistema");
+                        break;
+                    }
+                }
             break;
-
             }else{
                 JOptionPane.showMessageDialog(null, "Contraseña Incorrecta");
                 intentos ++;
             }
-           }
-            if (intentos == 3) {
+           }if (intentos == 3) {
                 JOptionPane.showMessageDialog(null, "Intentos máximos alcanzados");
             }
     }
