@@ -1,5 +1,7 @@
 package com.mycompany.proyecto_restaurante;
 
 public class claseVenta {
-    
+    public void ventaPlatosBebidas(){
+
+    }
 }
