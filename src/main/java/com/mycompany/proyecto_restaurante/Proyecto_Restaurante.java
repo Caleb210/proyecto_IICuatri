@@ -40,16 +40,19 @@ public class Proyecto_Restaurante {
                     switch(opcion){
                     case 1:
                         //Módulo de registro de clientes
-                        JOptionPane.showMessageDialog(null, "Modulo en ");
+                            JOptionPane.showMessageDialog(null, "Modulo en Mantenimiento");
                         break;
                     case 2:
                         //Agenda de reservas
+                            JOptionPane.showMessageDialog(null, "Modulo en Mantenimiento");
                         break;
                     case 3:
                         //Módulo de ventas de productos
+                            JOptionPane.showMessageDialog(null, "Modulo en Mantenimiento");
                         break;
                     case 4:
                         //Reportes de atención
+                            JOptionPane.showMessageDialog(null, "Modulo en Mantenimiento");
                         break;
                     case 5:
                         //Salir
