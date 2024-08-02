@@ -69,14 +69,14 @@ public class Proyecto_Restaurante {
                             //Guardar datos en el arreglo por instancia
                             arrCliente[i]=new cliente(cedula,nombre,apellido,VIP);
                         }
-        for(int i=0; i<arrEstudiante.length;i++){
-        lista+=("Cliente N"+i+" "+
-                arrCliente[i].getCedula()+" "+
-                arrCliente[i].getNombre()+" "+
-                arrCliente[i].getApellido()+" "+
-                arrCliente[i].getVIP()+"\n");
-        }
-        JOptionPane.showMessageDialog(null, lista); 
+                        for(int i=0; i<arrEstudiante.length;i++){
+                            lista+=("Cliente N"+i+" "+
+                            arrCliente[i].getCedula()+" "+
+                            arrCliente[i].getNombre()+" "+
+                            arrCliente[i].getApellido()+" "+
+                            arrCliente[i].getVIP()+"\n");
+                        }
+                        JOptionPane.showMessageDialog(null, lista); 
                         break;
                     case 2:
                         //Agenda de reservas
