@@ -5,6 +5,12 @@ import javax.swing.JOptionPane; //importacion
 public class Proyecto_Restaurante {
 
     public static void main(String[] args) {
+        //Variables clase cliente
+        int cedula = 0;
+        String nombre = " ";
+        String apellido = " ";
+        String VIP=" ";
+        String lista=" ";
         // Definir la ruta de la imagen
         String rutaImagen = "src\\main\\java\\com\\mycompany\\logo.jpg";
         ImageIcon icono = new ImageIcon(rutaImagen);
@@ -51,7 +57,29 @@ public class Proyecto_Restaurante {
                     switch(opcion){
                     case 1:
                         //Módulo de registro de clientes
-                            JOptionPane.showMessageDialog(null, "Modulo en Mantenimiento");
+                        estudiante[] arrEstudiante = new estudiante[5];
+
+                        //LLenado del arreglo con objetos
+                        for(int i=0; i<arrEstudiante.length; i++){
+                            //Solicitud de datos 
+                            cedula=Integer.parseInt(JOptionPane.showInputDialog("Dar cedula "+i));
+                            nombre=JOptionPane.showInputDialog("Dar nombre "+i);
+                            apellido=JOptionPane.showInputDialog("Dar apellido "+i);
+                            d=Double.parseDouble(JOptionPane.showInputDialog("Dar deuda "+i));
+                            //Guardar datos en el arreglo por instancia
+                            arrEstudiante[i]=new estudiante(cedula,nombre,apellido,deuda);
+                        }
+        for(int i=0; i<arrEstudiante.length;i++){
+            deudaTotal+=arrEstudiante[i].getdeuda();
+        lista+=("Estudiante N"+i+" "+
+                arrEstudiante[i].getCedula()+" "+
+                arrEstudiante[i].getNombre()+" "+
+                arrEstudiante[i].getApellido()+" "+
+                arrEstudiante[i].getdeuda()+"\n");
+        }
+        JOptionPane.showMessageDialog(null, lista);
+        JOptionPane.showMessageDialog(null, "La deuda total es "+deudaTotal);
+                            
                         break;
                     case 2:
                         //Agenda de reservas
