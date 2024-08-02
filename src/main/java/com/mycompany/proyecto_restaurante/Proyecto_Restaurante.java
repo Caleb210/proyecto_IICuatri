@@ -57,29 +57,26 @@ public class Proyecto_Restaurante {
                     switch(opcion){
                     case 1:
                         //Módulo de registro de clientes
-                        estudiante[] arrEstudiante = new estudiante[5];
+                        cliente[] arrCliente = new cliente[100];
 
                         //LLenado del arreglo con objetos
-                        for(int i=0; i<arrEstudiante.length; i++){
+                        for(int i=0; i<arrCliente.length; i++){
                             //Solicitud de datos 
                             cedula=Integer.parseInt(JOptionPane.showInputDialog("Dar cedula "+i));
                             nombre=JOptionPane.showInputDialog("Dar nombre "+i);
                             apellido=JOptionPane.showInputDialog("Dar apellido "+i);
-                            d=Double.parseDouble(JOptionPane.showInputDialog("Dar deuda "+i));
+                            VIP=JOptionPane.showInputDialog("Tienes membresia VIP? Si o no "+i);
                             //Guardar datos en el arreglo por instancia
-                            arrEstudiante[i]=new estudiante(cedula,nombre,apellido,deuda);
+                            arrCliente[i]=new cliente(cedula,nombre,apellido,VIP);
                         }
         for(int i=0; i<arrEstudiante.length;i++){
-            deudaTotal+=arrEstudiante[i].getdeuda();
-        lista+=("Estudiante N"+i+" "+
-                arrEstudiante[i].getCedula()+" "+
-                arrEstudiante[i].getNombre()+" "+
-                arrEstudiante[i].getApellido()+" "+
-                arrEstudiante[i].getdeuda()+"\n");
+        lista+=("Cliente N"+i+" "+
+                arrCliente[i].getCedula()+" "+
+                arrCliente[i].getNombre()+" "+
+                arrCliente[i].getApellido()+" "+
+                arrCliente[i].getVIP()+"\n");
         }
-        JOptionPane.showMessageDialog(null, lista);
-        JOptionPane.showMessageDialog(null, "La deuda total es "+deudaTotal);
-                            
+        JOptionPane.showMessageDialog(null, lista); 
                         break;
                     case 2:
                         //Agenda de reservas
