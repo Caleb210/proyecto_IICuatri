@@ -1,7 +1,45 @@
 package com.mycompany.proyecto_restaurante;
 
 public class claseVenta {
-    public void ventaPlatosBebidas(){
+    private int numeroFactura=0;
+    private Cliente cliente//lista de clientes;
+    private Date fecha=0;
+    private productos//falta lista de productos;
 
+	public estudiante(int numeroFactura, String cliente, String apellido, double deuda) {
+    
     }
+
+    public int getnumeroFactura() {
+		return this.numeroFactura;
+	}
+
+	public void setnumeroFactura(int numeroFactura) {
+		this.numeroFactura = numeroFactura;
+	}
+
+	public String getcliente() {
+		return this.cliente;
+	}
+
+    public void setcliente(String cliente)
+        {
+            this.cliente = cliente;
+        }
+
+    public Date getfecha() {
+		return this.fecha;
+    }
+
+    public void setApellido(Date fecha)
+    {
+        this.fecha = fecha;
+    }
+
+    public String getproductos() {
+		return this.productos;
+	}
+    public void setproductos(String productos) {
+		this.productos = productos;
+	}
 }
