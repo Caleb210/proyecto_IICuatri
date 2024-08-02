@@ -4,7 +4,7 @@ public class claseCliente {
     private int cedula = 0;
     private String nombre = " ";
     private String apellido = " ";
-    private boolean VIP;
+    private String VIP=" ";
 
 	public estudiante(int cedula, String nombre, String apellido, boolean VIP) {
     
@@ -36,10 +36,10 @@ public class claseCliente {
         this.apellido = apellido;
     }
 
-    public boolean getvVIP() {
+    public String getVIP() {
 		return this.VIP;
 	}
-    public void setdeuda(boolean VIP) {
+    public void setdeuda(String VIP) {
 		this.VIP = VIP;
 	}
 
